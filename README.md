@@ -9,3 +9,6 @@ Based off [BottomBar-SwiftUI](https://github.com/smartvipere75/bottombar-swiftui
 | ![](screen1.png) | ![](screen2.png) | ![](screen3.png) |
 |--|--|--|
 | ![](screen4.png) | ![](screen5.png) | |
+
+## To-do
+[] Dark mode adjsutments
