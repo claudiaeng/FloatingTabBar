@@ -1,10 +1,7 @@
-<p align="center">
-# FloatingTabBar
+<h1 align="center">FloatingTabBar</h1>
+<div align="center"><strong>made by <a href="www.github.com/claudiaeng>claudiaeng</a></strong></div>
+<div align="center">An aesthetic floating tab bar importabable via Swift Package Manager. Based off <a href ="https://github.com/smartvipere75/bottombar-swiftui">BottomBar-SwiftUI</a></div>
 
-An aesthetic floating tab bar importabable via Swift Package Manager. 
-
-Based off [BottomBar-SwiftUI](https://github.com/smartvipere75/bottombar-swiftui)
-<p>
 ## Previews
 
 | ![](screen1.png) | ![](screen2.png) | ![](screen3.png) |
