@@ -10,3 +10,4 @@
 
 ## To-do
 - [ ] Dark mode adjsutments
+- [ ] Refactor 1.0
