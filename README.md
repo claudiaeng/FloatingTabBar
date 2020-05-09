@@ -11,3 +11,4 @@
 ## To-do
 - [ ] Dark mode adjsutments
 - [ ] Refactor 1.0
+- [ ] Add functionality for scrollable bar for more than 5 tabs
