@@ -5,9 +5,9 @@
 
 ## Previews
 
-| ![](screen1.png) | ![](screen2.png) | ![](screen3.png) |
+| ![](/Screenshots/screen1.png) | ![](/Screenshots/screen2.png) | ![](/Screenshots/screen3.png) |
 |--|--|--|
-| ![](screen4.png) | ![](screen5.png) | |
+| ![](/Screenshots/screen4.png) | ![](/Screenshots/screen5.png) | |
 
 ## To-do
 - [ ] Dark mode adjsutments
