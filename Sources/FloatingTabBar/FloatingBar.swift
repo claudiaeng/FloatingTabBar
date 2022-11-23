@@ -4,14 +4,14 @@ import SwiftUI
 @available(OSX 10.15, *)
 public struct BottomBar : View {
     @Binding public var selectedIndex: Int
-    
+
     public let items: [BottomBarItem]
-    
+
     public init(selectedIndex: Binding<Int>, items: [BottomBarItem]) {
         self._selectedIndex = selectedIndex
         self.items = items
     }
-    
+
     func itemView(at index: Int) -> some View {
         Button(action: {
             withAnimation { self.selectedIndex = index }
@@ -19,22 +19,20 @@ public struct BottomBar : View {
             BottomBarItemView(isSelected: index == selectedIndex, item: items[index])
         }
     }
-    
+
     public var body: some View {
-        
+
         ZStack {
             BlurView(style: .light).frame(height: 60)
-            
+
             HStack(alignment: .center) {
-                self.itemView(at: 0)
-                Spacer()
-                self.itemView(at: 1)
-                Spacer()
-                self.itemView(at: 2)
-                Spacer()
-                self.itemView(at: 3)
-                Spacer()
-                self.itemView(at: 4)
+                ForEach(0..<items.count) { index in
+                    self.itemView(at: index)
+
+                    if index != self.items.count-1 {
+                        Spacer()
+                    }
+                }
             }.padding([.horizontal]).animation(.default).padding(.bottom,0).padding(.top,0)
         }
     }
@@ -55,4 +53,3 @@ struct BottomBar_Previews : PreviewProvider {
     }
 }
 #endif
-
