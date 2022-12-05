@@ -3,7 +3,7 @@ import SwiftUI
 @available(iOS 13.0, *)
 struct ContentView: View {
 
-    let items: [BottomBarItem] = [
+    @State var items: [BottomBarItem] = [
         BottomBarItem(icon: "cube", color: Color.iconColor),
         BottomBarItem(icon: "bookmark", color: Color.iconColor),
         BottomBarItem(icon: "magnifyingglass", color: Color.iconColor),

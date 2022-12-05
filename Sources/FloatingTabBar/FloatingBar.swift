@@ -42,14 +42,15 @@ public struct BottomBar : View {
 @available(iOS 13.0.0, *)
 @available(OSX 10.15.0, *)
 struct BottomBar_Previews : PreviewProvider {
+    @State static var items: [BottomBarItem] = [
+        BottomBarItem(icon: "house.fill", color: .purple),
+        BottomBarItem(icon: "heart", color: .pink),
+        BottomBarItem(icon: "magnifyingglass", color: .orange),
+        BottomBarItem(icon: "magnifyingglass", color: .orange),
+        BottomBarItem(icon: "person.fill", color: .blue)
+    ]
     static var previews: some View {
-        BottomBar(selectedIndex: .constant(0), items: [
-            BottomBarItem(icon: "house.fill", color: .purple),
-            BottomBarItem(icon: "heart", color: .pink),
-            BottomBarItem(icon: "magnifyingglass", color: .orange),
-            BottomBarItem(icon: "magnifyingglass", color: .orange),
-            BottomBarItem(icon: "person.fill", color: .blue)
-        ])
+        BottomBar(selectedIndex: .constant(0), items: BottomBar_Previews.$items)
     }
 }
 #endif
