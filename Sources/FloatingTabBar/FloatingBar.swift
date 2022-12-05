@@ -5,11 +5,11 @@ import SwiftUI
 public struct BottomBar : View {
     @Binding public var selectedIndex: Int
 
-    public let items: [BottomBarItem]
+    @Binding public var items: [BottomBarItem]
 
-    public init(selectedIndex: Binding<Int>, items: [BottomBarItem]) {
+    public init(selectedIndex: Binding<Int>, items: Binding<[BottomBarItem]>) {
         self._selectedIndex = selectedIndex
-        self.items = items
+        self._items = items
     }
 
     func itemView(at index: Int) -> some View {
