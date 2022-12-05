@@ -6,15 +6,26 @@ public struct BottomBar : View {
     @Binding public var selectedIndex: Int
 
     @Binding public var items: [BottomBarItem]
+    
+    public var completion: () async -> Void = {}
 
     public init(selectedIndex: Binding<Int>, items: Binding<[BottomBarItem]>) {
         self._selectedIndex = selectedIndex
         self._items = items
     }
+    
+    public init(selectedIndex: Binding<Int>, items: Binding<[BottomBarItem]>, completion: @escaping () async -> Void) {
+        self._selectedIndex = selectedIndex
+        self._items = items
+        self.completion = completion
+    }
 
     func itemView(at index: Int) -> some View {
         Button(action: {
             withAnimation { self.selectedIndex = index }
+            Task {
+                await completion()
+            }
         }) {
             BottomBarItemView(isSelected: index == selectedIndex, item: items[index])
         }
