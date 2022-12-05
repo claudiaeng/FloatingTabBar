@@ -32,7 +32,7 @@ struct ContentView: View {
             VStack {
                 Spacer()
                 ZStack {
-                    BottomBar(selectedIndex: $selectedIndex, items: items)
+                    BottomBar(selectedIndex: $selectedIndex, items: $items)
                         .cornerRadius(20)
                         .shadow(color: Color.darkTextColorMain.opacity(0.1), radius: 10,
                                 x: 10,
