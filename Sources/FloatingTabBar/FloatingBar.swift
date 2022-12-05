@@ -15,6 +15,9 @@ public struct BottomBar : View {
     func itemView(at index: Int) -> some View {
         Button(action: {
             withAnimation { self.selectedIndex = index }
+            Task {
+                await items[index].completion()
+            }
         }) {
             BottomBarItemView(isSelected: index == selectedIndex, item: items[index])
         }
