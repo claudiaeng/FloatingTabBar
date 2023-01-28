@@ -3,7 +3,7 @@ import SwiftUI
 @available(iOS 13.0, *)
 struct ContentView: View {
 
-    let items: [BottomBarItem] = [
+    @State var items: [BottomBarItem] = [
         BottomBarItem(icon: "cube", color: Color.iconColor),
         BottomBarItem(icon: "bookmark", color: Color.iconColor),
         BottomBarItem(icon: "magnifyingglass", color: Color.iconColor),
@@ -32,7 +32,7 @@ struct ContentView: View {
             VStack {
                 Spacer()
                 ZStack {
-                    BottomBar(selectedIndex: $selectedIndex, items: items)
+                    BottomBar(selectedIndex: $selectedIndex, items: $items)
                         .cornerRadius(20)
                         .shadow(color: Color.darkTextColorMain.opacity(0.1), radius: 10,
                                 x: 10,
