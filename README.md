@@ -1,6 +1,6 @@
-```
-CODE ASSETS STORE: <a href ="https://www.candl.tech/store">CANDL TECH</a>
-```
+<h1 align="center">CODE ASSETS STORE: <a href ="https://www.candl.tech/store">CANDL TECH</h1>
+
+---
 
 <h1 align="center">FloatingTabBar</h1>
 <div align="center">An aesthetic floating tab bar made with SwiftUI & Combine importabable via Swift Package Manager 📦</div>
